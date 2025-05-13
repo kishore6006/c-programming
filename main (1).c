@@ -1,17 +1,25 @@
 #include <stdio.h>
 
 int main() {
-    float celsius, fahrenheit;
+    int a, b, temp;
 
-    // Ask the user for the Celsius temperature
-    printf("Enter temperature in Celsius: ");
-    scanf("%f", &celsius);
+    // Input two numbers
+    printf("Enter first number (a): ");
+    scanf("%d", &a);
+    
+    printf("Enter second number (b): ");
+    scanf("%d", &b);
 
-    // Convert to Fahrenheit
-    fahrenheit = (celsius * 9.0 / 5.0) + 32;
+    // Display before swapping
+    printf("Before swapping: a = %d, b = %d\n", a, b);
 
-    // Display the result
-    printf("%.2f Celsius is equal to %.2f Fahrenheit\n", celsius, fahrenheit);
+    // Swapping using a third variable
+    temp = a;
+    a = b;
+    b = temp;
+
+    // Display after swapping
+    printf("After swapping: a = %d, b = %d\n", a, b);
 
     return 0;
 }
