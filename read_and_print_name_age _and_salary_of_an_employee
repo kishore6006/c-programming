@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    char name[50];  // To store the name (up to 50 characters)
+    int age;        // To store the age of the employee
+    float salary;   // To store the salary of the employee
+
+    // Input employee details
+    printf("Enter employee's name: ");
+    fgets(name, sizeof(name), stdin);  // Using fgets to read string input (allows spaces in name)
+
+    printf("Enter employee's age: ");
+    scanf("%d", &age);
+
+    printf("Enter employee's salary: ");
+    scanf("%f", &salary);
+
+    // Output employee details
+    printf("\nEmployee Details:\n");
+    printf("Name: %s", name);  // 'fgets' includes the newline, so no need for extra '\n'
+    printf("Age: %d\n", age);
+    printf("Salary: %.2f\n", salary);
+
+    return 0;
+}
